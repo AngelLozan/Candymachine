@@ -1,5 +1,68 @@
 # CANDY MACHINE
 
+* CMD for uploading: 
+
+scottlozano@Scotts-MBP metaplex % ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload \
+    -e devnet \
+    -k ~/.config/solana/devnet.json \
+    -cp ~/metaplex/js/packages/cli/src/config.json \
+   ~/metaplex/js/packages/cli/assets
+wallet public key: EnDPikdj6hfdSzrvenvmHWfigEuqMj2bHKkosYbUqRGv
+WARNING: The "arweave" storage option will be going away soon. Please migrate to arweave-bundle or arweave-sol for mainnet.
+
+WARNING: Skipping unsupported file type /Users/scottlozano/metaplex/js/packages/cli/assets/.DS_Store
+Beginning the upload for 13 (img+json) pairs
+started at: 1641901304057
+initializing candy machine
+
+*
+initialized config for a candy machine with publickey: `4oWTsUKPdrkU1aoMF3cJPjyrH2jkP9aLturcrY77hGJ9`
+*
+
+Uploading Size 13 { mediaExt: '.PNG', index: '0' }
+Processing asset: 0
+Processing asset: 0
+Processing asset: 1
+Processing asset: 2
+Processing asset: 3
+Processing asset: 4
+Processing asset: 5
+Processing asset: 6
+Processing asset: 7
+Processing asset: 8
+Processing asset: 9
+Processing asset: 10
+Processing asset: 11
+Processing asset: 12
+Writing indices 0-9
+Writing indices 10-12
+Done. Successful = true.
+ended at: 2022-01-11T11:43:25.747Z. time taken: 00:01:41
+scottlozano@Scotts-MBP metaplex % 
+
+## Deploy to mainnet-beta
+
+1. Change config.json `Sol treasury account`
+2. Get --rpc-url from here: https://runnode.com/faq/ to put into the upload command
+3. Generate a new File System Wallet keypair: https://docs.solana.com/wallet-guide/file-system-wallet
+4. Ensure wallet has at least 1 SOL to guarentee the transaction. https://github.com/metaplex-foundation/metaplex/issues/983
+5. Change upload command to reflect this and change the path to the keypair (-k denoted) and the (-e) environment to mainnnet-beta. Also add the --rpc-url found here: https://www.rootstrap.com/blog/how-to-mint-nfts-with-solanas-candymachine/ (towards the bottom at this point: REACT_APP_SOLANA_RPC_HOST=Solana/ Mainnet)
+
+ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload \
+    -e mainnet-beta \
+    -k ~/.config/solana/mainnet.json \ 
+    -cp ~/metaplex/js/packages/cli/src/config.json \
+   ~/metaplex/js/packages/cli/assets
+
+-AND-
+
+ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts update_candy_machine --env mainnet-beta --date "now" --price 0 --keypair /root/serverwallet/keypair.json --cache-name randomname123 --rpc-url https://api.mainnet-beta.solana.com
+
+
+6. Update the .env file with new data once you upload. 
+7. Deploy on Netlify?
+
+
 https://user-images.githubusercontent.com/81876372/133098938-dc2c91a6-1280-4ee1-bf0e-db0ccc972ff7.mp4
 
 ## Settings examples
