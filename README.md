@@ -4,6 +4,13 @@
   </a>
 </p>
 
+This repo site deployed at: https://scottlozano.github.io/Candymachine/
+
+- Connect to devnet
+- Recommended phantom wallet to mint
+* This is a test for deploying other nfts for other projects. Free devnet NFTS!
+
+
 Metaplex is a protocol built on top of Solana that allows:
 
 - **Creating/Minting** Non-Fungible Tokens;
