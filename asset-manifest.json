@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Candymachine/static/css/main.6e1089bc.chunk.css",
+    "main.js": "/Candymachine/static/js/main.1504a5c5.chunk.js",
+    "main.js.map": "/Candymachine/static/js/main.1504a5c5.chunk.js.map",
+    "runtime-main.js": "/Candymachine/static/js/runtime-main.b8159a83.js",
+    "runtime-main.js.map": "/Candymachine/static/js/runtime-main.b8159a83.js.map",
+    "static/js/2.2b36a967.chunk.js": "/Candymachine/static/js/2.2b36a967.chunk.js",
+    "static/js/2.2b36a967.chunk.js.map": "/Candymachine/static/js/2.2b36a967.chunk.js.map",
+    "static/js/3.4da7bcba.chunk.js": "/Candymachine/static/js/3.4da7bcba.chunk.js",
+    "static/js/3.4da7bcba.chunk.js.map": "/Candymachine/static/js/3.4da7bcba.chunk.js.map",
+    "index.html": "/Candymachine/index.html",
+    "static/css/main.6e1089bc.chunk.css.map": "/Candymachine/static/css/main.6e1089bc.chunk.css.map",
+    "static/js/2.2b36a967.chunk.js.LICENSE.txt": "/Candymachine/static/js/2.2b36a967.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8159a83.js",
+    "static/js/2.2b36a967.chunk.js",
+    "static/css/main.6e1089bc.chunk.css",
+    "static/js/main.1504a5c5.chunk.js"
+  ]
+}
