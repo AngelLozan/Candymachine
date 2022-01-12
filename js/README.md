@@ -1,3 +1,9 @@
+## Readme for running candy-machine-ui
+
+- You can run the env command and set the index.html password for REACT_APP_PASSWORD with cmd: 
+
+* REACT_APP_PASSWORD=PasswordExample npm run start
+
 ## Setup
 
 Be sure to be running Node v14.17.6 and yarn version 1.22.10.
