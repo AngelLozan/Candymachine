@@ -1,8 +1,9 @@
 import './App.css';
+
 import { useMemo } from 'react';
 import * as anchor from '@project-serum/anchor';
 import Home from './Home';
-
+import React from "react";
 import { clusterApiUrl } from '@solana/web3.js';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import {
@@ -20,6 +21,8 @@ import {
 import { WalletDialogProvider } from '@solana/wallet-adapter-material-ui';
 
 import { ThemeProvider, createTheme } from '@material-ui/core';
+
+
 
 const theme = createTheme({
   palette: {
@@ -50,7 +53,10 @@ const connection = new anchor.web3.Connection(rpcHost
 const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
 const txTimeoutInMilliseconds = 30000;
 
+
+
 const App = () => {
+  
   const endpoint = useMemo(() => clusterApiUrl(network), []);
 
   const wallets = useMemo(
@@ -65,11 +71,12 @@ const App = () => {
   );
 
   return (
+  
     <ThemeProvider theme={theme}>
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect>
           <WalletDialogProvider>
-            <Home
+            < Home
               candyMachineId={candyMachineId}
               connection={connection}
               startDate={startDateSeed}
@@ -80,6 +87,7 @@ const App = () => {
         </WalletProvider>
       </ConnectionProvider>
     </ThemeProvider>
+  
   );
 };
 

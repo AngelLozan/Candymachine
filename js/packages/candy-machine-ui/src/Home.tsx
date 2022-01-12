@@ -20,6 +20,7 @@ import { Header } from './Header';
 import { MintButton } from './MintButton';
 import { GatewayProvider } from '@civic/solana-gateway-react';
 
+
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
   height: 60px;
@@ -30,6 +31,7 @@ const ConnectButton = styled(WalletDialogButton)`
   font-size: 16px;
   font-weight: bold;
 `;
+
 
 const MintContainer = styled.div``; // add your owns styles here
 
@@ -161,6 +163,7 @@ const Home = (props: HomeProps) => {
     refreshCandyMachineState,
   ]);
 
+
   return (
     <Container style={{ marginTop: 100 }}>
       <Container maxWidth="xs" style={{ position: 'relative' }}>
@@ -208,6 +211,7 @@ const Home = (props: HomeProps) => {
             </>
           )}
         </Paper>
+
       </Container>
 
       <Snackbar
