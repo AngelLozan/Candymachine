@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, useCallback } from 'react';
+import { useDispatch } from 'react-redux';
 import * as anchor from '@project-serum/anchor';
 
 import styled from 'styled-components';
@@ -163,6 +164,9 @@ const Home = (props: HomeProps) => {
     refreshCandyMachineState,
   ]);
 
+// const handleLogout = () => {
+//     localStorage.clear();
+//   };
 
   return (
     <Container style={{ marginTop: 100 }}>
@@ -211,6 +215,10 @@ const Home = (props: HomeProps) => {
             </>
           )}
         </Paper>
+
+     {/* <button className="btn btn-primary" onClick={handleLogout}>
+        Logout
+      </button>*/}
 
       </Container>
 

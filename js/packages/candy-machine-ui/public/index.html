@@ -25,15 +25,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Candy Machine UI</title>
-<SCRIPT language="JavaScript">
-var password; 
-var pass1="%REACT_APP_PASSWORD%"; 
-password=prompt('Enter Password',' '); 
-if (password==pass1) 
-alert('Time to mint some SOL NFTs, make sure you are connected to your Exodus-Phantom Wallet and mainnet-beta and Click "OK" to proceed');
-else { window.location="http://localhost:3000/Candymachine"; 
-} 
-</SCRIPT>
+<script language="JavaScript" type="module" src="%PUBLIC_URL%/login.js"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

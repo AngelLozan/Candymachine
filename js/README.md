@@ -3,6 +3,7 @@
 - You can run the env command and set the index.html password for REACT_APP_PASSWORD with cmd: 
 
 * REACT_APP_PASSWORD=PasswordExample npm run start
+* .env files do not populate html
 
 ## Setup
 
