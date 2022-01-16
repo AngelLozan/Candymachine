@@ -7,13 +7,13 @@ import React from "react";
 import { clusterApiUrl } from '@solana/web3.js';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 // import Login from './Login';
 // import ProtectedRoute from './ProtectedRoute';
 
 // import Signin from './components/Signin';
 // import ProtectedRoute, { ProtecteRouteProps } from './components/ProtectedRoute';
-// import { useSessionContext } from "./components/SessionContext";
+// // import { useSessionContext } from "./components/SessionContext";
 // import { Route, Routes } from 'react-router';
 
 import {
@@ -80,26 +80,15 @@ const App: React.FC = () => {
     [],
   );
 
-  // const [isAuth, setIsAuth] = useState(false);
-  // const [sessionContext, updateSessionContext] = useSessionContext();
-
-  // const setRedirectPath = (path: string) => {
-  //   updateSessionContext({...sessionContext, redirectPath: path});
-  // }
-
-  // const defaultProtectedRouteProps: ProtectedRouteProps = {
-  //   isAuthenticated: !!sessionContext.isAuthenticated,
-  //   authenticationPath: '/signin',
-  //   redirectPath: sessionContext.redirectPath,
-  //   setRedirectPath: setRedirectPath
-  // };
 
   return (
- 
+
     <ThemeProvider theme={theme}>
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect>
           <WalletDialogProvider>
+          
+      
             <Home
               candyMachineId={candyMachineId}
               connection={connection}
@@ -107,11 +96,14 @@ const App: React.FC = () => {
               txTimeout={txTimeoutInMilliseconds}
               rpcHost={rpcHost}
             /> 
+      
+  
           </WalletDialogProvider>
         </WalletProvider>
       </ConnectionProvider>
     </ThemeProvider>
- 
+
+    
   );
 };
 

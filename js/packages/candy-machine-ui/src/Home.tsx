@@ -166,6 +166,7 @@ const Home = (props: HomeProps) => {
 
 // const handleLogout = () => {
 //     localStorage.clear();
+//     window.location.pathname = "/signin";
 //   };
 
   return (
